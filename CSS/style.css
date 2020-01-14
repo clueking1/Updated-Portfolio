@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css?family=Cairo:300,400&display=swap');
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Cairo', sans-serif;
+}
+
+
+.main {
+    
+    background: url("../images/heyeye.jpg") no-repeat center center scroll;
+    background-size: cover;
+    position: relative;
+    height: 861px;
+    top: 0;
+    padding-top: 10px;
+    z-index: -1;
+    border-bottom: 9px groove black;
+}
+
+.mainTitle {
+  text-align: center;
+  color:aliceblue;
+}
+
+.link1 {
+  width: 32%;
+  float: left;
+  list-style-type: none;
+  text-align: center;
+}
+
+.link2 {
+  width: 33%;
+  float: left;
+ list-style-type: none;
+  text-align: center;
+}
+.link3 {
+  width: 33%;
+  float: left;
+  list-style-type: none;
+  text-align: center;
+
+ 
+}
+
+nav {
+  float: left;
+  width: 100%;
+  left: 0;
+  right: 0;
+  margin: 0px auto;
+  padding-bottom: 16px;
+  border: 2px groove  #a2a3a5;
+   background-color: #251f2fd6;
+}
+
+.allMainContents {
+  clear:both
+}
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+    display: flex;
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  
+  
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.slideshow-container img {
+   
+    width: 100%;
+    height: ;
+    max-height: 691px;
+    z-index: 1;
+    flex: 0 1 auto;
+  /* The above is shorthand for:
+  flex-grow: 0,
+  flex-shrink: 1,
+  flex-basis: auto
+  */
+
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+.aboutMeContents {
+    background: url(../images/IMG_1666.JPG)no-repeat center center fixed;
+    background-size: contain;
+    position: relative;
+  
+    height: 100%;
+    padding-top: 10px;
+    background-color: black;
+   z-index: -1;
+}
+
+
+
+.aboutMeDiv {
+    width: 55%;
+    left: 0;
+    right: 0;
+    margin: 300px auto;
+    border: 2px groove aliceblue;
+    background-color: #251f2fd6;
+    box-shadow: 39px 20px 66px 20px #8967b957;
+    margin-bottom: 0px
+
+}
+
+.aboutMeP {
+    padding:10px;
+    color: aliceblue;
+    text-align: center;
+}
+
