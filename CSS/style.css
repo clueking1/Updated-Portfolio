@@ -7,6 +7,7 @@ html,body
     padding: 0px;
     
     font-family: 'Cairo', sans-serif;
+
 }
 
 .all {
@@ -261,10 +262,11 @@ nav {
 
 .port {
   position: relative;
-  
-  height: 926px;
-   
-  background-color: black;
+
+  height: 447px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
 }
 
 
@@ -276,31 +278,18 @@ nav {
 
 .portname {
   top: 0;
-  margin-top: 0px;
-  margin-left: 0px;
+  margin-top: -274px;
+  margin-left: -6px;
+  padding: 10px;
   position: absolute;
   border: 6px groove #565656;
   background-color: #000000d9;
   text-align:center;
-  width: 300px;
+  width: 272.9px;
   color:#91b0cc;
 }
 
-.portA {
-  top: 248px;
-  left: 0;
-  position: absolute;
-  width: 145px;
-  text-align :center;
-}
-.portA2 {
- top: 248px;
- left: 0;
- margin-left: 144px;
- width: 157px;
-  position: absolute;
-  text-align :center;
-}
+
 
 .port2Div {
   position: relative;
@@ -352,14 +341,39 @@ nav {
 }
 
 .port a {
+
   text-decoration: none;
   color:#91b0cc;
   padding: 9px;
+  font-size: 1em;
   border: 2px groove;
   box-shadow: 20px 20px 20px 20px #91b0cc1c;
   transition: .3s ease-in-out;
   background-color: #000000d9;
+  
+
+
 }
+
+.portA {
+  position:absolute;
+  width: 152px;
+  margin-left: -6px;
+  margin-top: -20px;
+  text-align: center;
+  
+}
+
+.portA2 {
+  position:absolute;
+  width: 122px;
+  left: 0;
+  right: 0;
+  margin: -20px auto;
+  margin-left: 150px;
+  text-align: center;
+}
+
 
 .title {
   text-align: center;
@@ -440,7 +454,7 @@ nav {
   left: 0;
   right: 0;
   margin: 43px auto;
-    margin-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 .submit {
@@ -453,3 +467,100 @@ nav {
 
 }
 
+* {
+  box-sizing: border-box;
+}
+body {  
+  background: #100000; 
+  font-family: Avenir, 
+    sans-serif; 
+  color: #fff; 
+}
+
+div#carousel { 
+  perspective: 1200px; 
+  background: #100000; 
+  padding-top: 5%; 
+  font-size:0; 
+  margin-bottom: 3rem; 
+}
+figure#spinner { 
+  transform-style: preserve-3d; 
+  height: 373px; 
+  -webkit-transform-origin: 50% 50%;
+
+  transform-origin: 50% 50% -400px; 
+ 
+  transition: 1s; 
+
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+
+} 
+figure#spinner figure { 
+  width: 20%; 
+  max-width: 270px; 
+  position: absolute; 
+  left: 40%;
+  transform-origin: 50% 50% -400px;
+  outline:1px solid transparent; 
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+
+  transition: 1s;
+  min-width: 270px;
+  min-height: 300px; 
+  overflow: hidden;
+}
+figure#spinner figure.focus { 
+  width: 26%; 
+  left: 37%; 
+  margin-top: -3rem; 
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  overflow: hidden;
+} 
+figure#spinner figure img { 
+  width: 100%;
+  min-width: 200px;
+  min-height: 200px;
+  overflow: hidden; 
+} 
+
+figcaption { 
+  position: absolute; 
+  top: 90%; 
+  width: 272px;
+  padding: .3rem; 
+  z-index: 2; 
+  font-size: 1.1rem; 
+
+
+}
+
+figure#spinner figure.current:hover figcaption,
+figure#spinner figure.current.caption figcaption
+{ 
+  top: 90%; 
+
+  bottom: 0; 
+} 
+div#carousel ~ span { 
+  color: #fff; 
+  margin: 5%; 
+  display: inline-block; 
+  text-decoration: none; 
+  font-size: 2rem; 
+  transition: 0.6s color; 
+  position: relative; 
+  margin-top: -6rem; 
+  border-bottom: none; 
+  line-height: 0; 
+}
+div#carousel ~ span:hover { 
+  color: #888; 
+  cursor: pointer; 
+}
