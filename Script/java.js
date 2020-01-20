@@ -44,6 +44,8 @@ var forEach = function (array, callback, scope) {
   }
 };
 
+var spin = document.querySelector('figure#spinner')
+var ua = navigator.userAgent.toLowerCase(); 
 var spinner = document.querySelector("#spinner"),
 angle = 0,
 images = document.querySelectorAll("#spinner figure"),
@@ -55,20 +57,30 @@ current = 1;
 forEach (images, function (index, value) {
     images[index].style.webkitTransform = "rotateY(-"+start+"deg)";
     images[index].style.transform = "rotateY(-"+start+"deg)";
-    images[index].addEventListener("click", function() { 
-	     if (this.classList.contains('current')) {
-			 	this.classList.toggle("focus");
-			 }
-    })
+ 
     start = start + degInt;
 });
 
 function setCurrent(current) { 
   document.querySelector('figure#spinner figure:nth-child('+current+')').classList.add('current'); 
+
+
+  
+}
+
+function style () {
+ 
+  if (ua.indexOf('safari') != -1) { 
+  
+    
+      spin.style.transform = 'translateZ(-500px)';
+  }
 }
 
 function galleryspin(sign) { 
-	forEach (images, function (index, value) {
+
+  console.log('noooooo')
+  forEach (images, function (index, value) {
 		images[index].classList.remove('current');
 		images[index].classList.remove('focus');
 		images[index].classList.remove('caption'); 
@@ -83,34 +95,28 @@ function galleryspin(sign) {
             	if (current == 0) { current = numpics; } 
            }
   
-spinner.setAttribute("style","-webkit-transform: rotateY("+ angle +"deg); transform: rotateY("+ angle +"deg)");
+           
+           
+   
+            spinner.setAttribute("style","-webkit-transform: rotateY("+ angle +"deg); -webkit-transform: rotateY("+ angle +"deg);");
+         
+
   setCurrent(current);
+
+
+
 }
 
+var slideButs = document.querySelectorAll('.ss-icon')
 
 
-document.body.onkeydown = function(e){
-    switch(e.which) {
-        case 37: // left cursor
-        galleryspin('-');
-        break;
 
-        case 39: // right cursor
-        galleryspin('');
-        break;
 
-        case 90: // Z - zoom image in forefront image
-        document.querySelector('figure#spinner figure.current').classList.toggle('focus');
-        break;
-        
-        case 67: // C - show caption for forefront image
-        document.querySelector('figure#spinner figure.current').classList.toggle('caption');
-        break;
-        
-        default: return; // exit this handler for other keys
-    }
-    e.preventDefault();
-}
+
+
 
 setCurrent(1);
+
+
+style()
 
