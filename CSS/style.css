@@ -278,73 +278,35 @@ nav {
 
 .portname {
   top: 0;
-  margin-top: -274px;
+  margin-top: 0px;
   margin-left: -6px;
-  padding: 10px;
+  padding: 2px;
   position: absolute;
   border: 6px groove #565656;
   background-color: #000000d9;
-  text-align:center;
-  width: 272.9px;
+  text-align: center;
+  width: 256px;
   color:#91b0cc;
+  height: 48px;
 }
 
 
 
-.port2Div {
-  position: relative;
-  width: 50%;
-
-  float: left;
-}
-
-.portPair1 {
-    width: 624px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-   
-}
-
-
-.port3Div {
-  position: relative;;
-  width: 50%;
-
-  float: left;
-}
 
 
 
-.port4Div {
-  position: relative;;
-  width: 50%;
 
-  float: left;
-}
 
-.portPair2 {
-  width: 624px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
- 
-}
 
-.port5Div {
-  position:absolute;
-  width: 300px;
-  left: 0;
-  right: 0;
-  margin: 615px auto;
-  margin-bottom: 0px;
-}
+
+
+
 
 .port a {
 
   text-decoration: none;
   color:#91b0cc;
-  padding: 9px;
+  padding: 2px;
   font-size: 1em;
   border: 2px groove;
   box-shadow: 20px 20px 20px 20px #91b0cc1c;
@@ -357,21 +319,42 @@ nav {
 
 .portA {
   position:absolute;
-  width: 152px;
-  margin-left: -6px;
-  margin-top: -20px;
+  width: 125px;
+  margin-left: 0px;
+  margin-top: -47px;
   text-align: center;
-  
+  height: 39px;
 }
+
+.portA3 {
+  position:absolute;
+  width: 250px;
+  margin-left: 0px;
+  margin-top: -47px;
+  text-align: center;
+  height: 39px;
+  text-decoration: none;
+  color:#91b0cc;
+  padding: 2px;
+  font-size: 1em;
+  border: 2px groove;
+  box-shadow: 20px 20px 20px 20px #91b0cc1c;
+  transition: .3s ease-in-out;
+  background-color: #000000d9;
+}
+
 
 .portA2 {
   position:absolute;
-  width: 122px;
+  width: 125px;
   left: 0;
   right: 0;
-  margin: -20px auto;
-  margin-left: 150px;
+  margin: -47px auto;
+ 
+  margin-left: 125px;
   text-align: center;
+  height: 39px;
+
 }
 
 
@@ -452,6 +435,7 @@ nav {
 .form-message {
   position:absolute;
   background-color:#91b0cc;
+  text-align: center;
   left: 0;
   right: 0;
   margin: 43px auto;
@@ -472,92 +456,74 @@ nav {
   z-index: 1;
 }
 
-* {
-  box-sizing: border-box;
-}
-body {  
-  background: #100000; 
-  font-family: Avenir, 
-    sans-serif; 
-  color: #fff; 
-}
-
-div#carousel { 
- perspective: 1200px; 
-
-  background: #100000; 
-  padding-top: 5%; 
-  font-size:0; 
-  margin-bottom: 3rem; 
-}
-figure#spinner { 
-  transform-style: preserve-3d; 
-  -webkit-transform-style: preserve-3d; 
-  
-  
--webkit-perspective-origin: 100% 100% none;
-
-  height: 373px; 
-  -webkit-transform-origin: 50% 50%; 
-
-  transform-origin: 50% 50% -300px; 
+body {
  
-  transition: 1s; 
 
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-
-  
-
-} 
-figure#spinner figure { 
-  width: 20%; 
-  max-width: 270px; 
-  position: fixed; 
-  left: 40%;
-
-  transform-origin: 50% 50% -300px;
- 
-  outline:1px solid transparent; 
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-
-  transition: 1s;
-  min-width: 270px;
-  min-height: 300px; 
-  overflow: hidden;
 }
 
-figure#spinner figure img { 
+.container {
+  margin: 56px auto;
+  width: 250px;
+  height: 200px;
+  position: relative;
+  perspective: 1200px;
+}
+
+.carousel {
+  height: 100%;
   width: 100%;
-  min-width: 200px;
-  min-height: 200px;
-  overflow: hidden; 
-} 
-
-figcaption { 
-  position: absolute; 
-  top: 90%; 
-  width: 272px;
-  padding: .3rem; 
-  z-index: 2; 
-  font-size: 1.1rem; 
-
-
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 1s;
 }
 
-figure#spinner figure.current:hover figcaption,
-figure#spinner figure.current.caption figcaption
-{ 
-  top: 90%; 
+.item {
+  display: block;
+  position: absolute;
+  background: #000;
+  width: 250px;
+  height: 250px;
+  
+ 
+  
+  color: #FFF;
+  opacity: 0.95;
+  border-radius: 29px;
+}
 
-  bottom: 0; 
+.a {
+  transform: rotateY(0deg) translateZ(250px);
+  
+}
+.b {
+  transform: rotateY(60deg) translateZ(250px);
+ 
+}
+.c {
+  transform: rotateY(120deg) translateZ(250px);
+
+}
+.d {
+  transform: rotateY(180deg) translateZ(250px);
+ 
+}
+.e {
+  transform: rotateY(240deg) translateZ(250px);
+
 } 
-div#carousel ~ span { 
-  color: #fff; 
-  margin: 5%; 
+.f {
+  transform: rotateY(300deg) translateZ(250px);
+
+}
+.buts {
+  left: 0;
+  right: 0;
+  margin: 144px auto;
+  width: 180px;
+}
+.next, .prev {
+  color: rgba(255, 255, 255, 0.726); 
+  margin: 19%; 
   display: inline-block; 
   text-decoration: none; 
   font-size: 2rem; 
@@ -565,19 +531,26 @@ div#carousel ~ span {
   position: relative; 
   margin-top: -6rem; 
   border-bottom: none; 
-  line-height: 0; 
+  line-height: 0;
 }
-div#carousel ~ span:hover { 
+
+.next:hover {
   color: #888; 
   cursor: pointer; 
 }
+
+.prev:hover {
+  color: #888; 
+  cursor: pointer; 
+}
+
 
 @media only screen and (max-width: 500px) {
  .aboutMeDiv {
     position:absolute;
     width:344px;
 
-    height: 291px;
+    height: 363px;
  }
  .resBut {
   

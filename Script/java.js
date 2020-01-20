@@ -36,87 +36,23 @@ window.onscroll = function(){
   }
   
 }
+var carousel = $(".carousel"),
+    currdeg  = 0;
 
-// forEach method
-var forEach = function (array, callback, scope) {
-  for (var i = 0; i < array.length; i++) {
-    callback.call(scope, i, array[i]); 
+$(".next").on("click", { d: "n" }, rotate);
+$(".prev").on("click", { d: "p" }, rotate);
+
+function rotate(e){
+  if(e.data.d=="n"){
+    currdeg = currdeg - 60;
   }
-};
-
-var spin = document.querySelector('figure#spinner')
-var ua = navigator.userAgent.toLowerCase(); 
-var spinner = document.querySelector("#spinner"),
-angle = 0,
-images = document.querySelectorAll("#spinner figure"),
-numpics = images.length,
-degInt = 360 / numpics,
-start = 0,
-current = 1;
-
-forEach (images, function (index, value) {
-    images[index].style.webkitTransform = "rotateY(-"+start+"deg)";
-    images[index].style.transform = "rotateY(-"+start+"deg)";
- 
-    start = start + degInt;
-});
-
-function setCurrent(current) { 
-  document.querySelector('figure#spinner figure:nth-child('+current+')').classList.add('current'); 
-
-
-  
-}
-
-function style () {
- 
-  if (ua.indexOf('safari') != -1) { 
-  
-    
-      spin.style.transform = 'translateZ(-500px)';
+  if(e.data.d=="p"){
+    currdeg = currdeg + 60;
   }
+  carousel.css({
+    "-webkit-transform": "rotateY("+currdeg+"deg)",
+    "-moz-transform": "rotateY("+currdeg+"deg)",
+    "-o-transform": "rotateY("+currdeg+"deg)",
+    "transform": "rotateY("+currdeg+"deg)"
+  });
 }
-
-function galleryspin(sign) { 
-
-  console.log('noooooo')
-  forEach (images, function (index, value) {
-		images[index].classList.remove('current');
-		images[index].classList.remove('focus');
-		images[index].classList.remove('caption'); 
-	})
- 
-	if (!sign) { angle = angle + degInt; 
-           current = (current+1);
-            if (current > numpics) { current = 1; }
-				} else { 
-            angle = angle - degInt; 
-            current = current - 1;
-            	if (current == 0) { current = numpics; } 
-           }
-  
-           
-           
-   
-            spinner.setAttribute("style","-webkit-transform: rotateY("+ angle +"deg); -webkit-transform: rotateY("+ angle +"deg);");
-         
-
-  setCurrent(current);
-
-
-
-}
-
-var slideButs = document.querySelectorAll('.ss-icon')
-
-
-
-
-
-
-
-setCurrent(1);
-
-
-style()
-
