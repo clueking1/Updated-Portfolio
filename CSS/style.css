@@ -11,7 +11,7 @@ html,body
 }
 
 .all {
-  background: url("../images/heyeye.jpg") no-repeat center center scroll;
+  background: url("../images/heyeye.jpg") no-repeat center center fixed;
     background-size: cover;
 }
 .main {
@@ -114,7 +114,8 @@ nav {
 
 .allMainContents {
   clear:both;
-
+  background: url("../images/heyeye.jpg") no-repeat center center fixed;
+  background-size: cover;
 }
 * {box-sizing:border-box}
 
@@ -227,7 +228,7 @@ nav {
     background-size: cover ;
  
     margin: -9px auto;
-    height: 720px;
+    height: 920px;
     padding-top: 0px;
     background-color: black;
     z-index: 1;
@@ -266,14 +267,14 @@ nav {
 
 .port {
   position: relative;
-  background: url("../images/white.jpg") no-repeat center center scroll;
+  background: url("../images/5.jpg") no-repeat center center fixed;
   width: 100%;
   
   margin-top: -9px;
 
  
     background-size: cover ;
-  height: 720px;
+  height: 920px;
   overflow-x: hidden;
   overflow-y: hidden;
 }
@@ -369,7 +370,6 @@ nav {
 
 .title {
   text-align: center;
-
   color:#91b0cc;
   border: 6px groove #565656;
   background-color: #000000d9;
@@ -380,7 +380,17 @@ nav {
 }
 
 .contactMe {
-  height: 414px;
+  height: 920px;
+  background: url("../images/3.jpg") no-repeat center center fixed;
+  background-size: cover;
+  margin-top: -42px;
+}
+
+.about {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 135px auto;
 }
 
 
