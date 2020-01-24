@@ -21,22 +21,34 @@ const someElement2 = document.querySelectorAll(".yes");
 const but = document.querySelectorAll(".item");
 const img = document.querySelector(".no");
 const con = document.querySelector(".container");
+const nex = document.querySelectorAll(".buts");
 const fig = document.querySelectorAll("figcaption");
+
+
 
 but.forEach((t) => {
   t.addEventListener('click', () => {
+      console.log(t)
     if(con.style.perspective === '1200px') {
       con.style.perspective = '800px'
       fig.forEach((t) => {
         t.style.opacity= '1'
         t.style.visibility= 'visible'
     })
+    nex.forEach((l) => {
+      l.style.opacity= '0'
+      l.style.visibility= 'hidden'
+  })
     } else {
       con.style.perspective = '1200px'
       fig.forEach((t) => {
         t.style.opacity= '0'
         t.style.visibility= 'hidden'
     })
+    nex.forEach((l) => {
+      l.style.opacity= '1'
+      l.style.visibility= 'visible'
+  })
     }
   })
 })
