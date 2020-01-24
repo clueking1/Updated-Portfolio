@@ -20,9 +20,9 @@
 
             <nav class="nav"> 
                     <ul>
-                        <li class="link1"><a class="yes"href="">About</a></li>
-                        <li class="link2"><a class="yes"href="">Portfolio</a></li>
-                        <li class="link3"><a class="yes"href="">Contact</a></li>
+                        <li class="link1"><a class="yes"href="#aboutMe">About</a></li>
+                        <li class="link2"><a class="yes"href="#port">Portfolio</a></li>
+                        <li class="link3"><a class="yes"href="#contact">Contact</a></li>
                         
                     </ul>
                 </nav>
@@ -33,7 +33,7 @@
          
             <div class="allMainContents">
                     
-                <div class="slideshow-container">
+                <div class="slideshow-container" id = "sliding">
 
                     <div class="mySlides fade">
                         <img src="images/1.jpg">
@@ -87,31 +87,19 @@
             </div>
             
 
-            <section class="aboutMeContents">
-                    <div class="aboutMeDiv">
-                        <p class="aboutMeP">
-                            Full Stack Web Developer and recent graduate of Case Western Reserve University’s Coding Bootcamp. Skilled in JavaScript, 
-                            CSS, React.js and responsive web design. Background includes a music degree which speaks to my innovation and creativity, 
-                            composing songs from scratch. Classically trained pianist possessing technical abilities from rigorous training. Apply my acquired 
-                            technical skills and past capabilities into coding which helps me solve complex problems. Excited to leverage skills in the future as part of a 
-                            fast-paced, quality-driven team in order to build better experiences on the web.
-            
-                        </p>
-                    </div>
-            </section>
         
-            <section class="port">
-                <div class="container">
+            <section class="port" id = "port">
+                <div class="container" id ="portspin">
                     <div class="carousel">
                       <div class="item a">
-                        <img  src="images/PortFace.jpg" height="250px" width="250px">
+                        <img class="no" src="images/PortFace.jpg" height="250px" width="250px">
                         <h3 class="portname">Portfolio!</h3>
                         <div class="portA3">Click the arrows to view!</div>
                       </div>
                       <div class="item b">
                         <img  src="images/Weather.png" height="250px" width="250px">
                      
-                        <figcaption>
+                        <figcaption post-id="{{ post.id }}">
                             <h3 class="portname">Weather Dashboard</h3>
                             <a class="portA"href="https://github.com/clueking1/Weather-API" target="_blank">Github</a>
                             <a class="portA2"href="https://clueking1.github.io/Weather-API/" target="_blank">Website</a>
@@ -163,7 +151,21 @@
             </section>
         </div>
 
-        <section class="contactMe">
+
+        <section class="aboutMeContents" id = "aboutMe">
+            <div class="aboutMeDiv hidden" id="about">
+                <p class="aboutMeP">
+                    Full Stack Web Developer and recent graduate of Case Western Reserve University’s Coding Bootcamp. Skilled in JavaScript, 
+                    CSS, React.js and responsive web design. Background includes a music degree which speaks to my innovation and creativity, 
+                    composing songs from scratch. Classically trained pianist possessing technical abilities from rigorous training. Apply my acquired 
+                    technical skills and past capabilities into coding which helps me solve complex problems. Excited to leverage skills in the future as part of a 
+                    fast-paced, quality-driven team in order to build better experiences on the web.
+    
+                </p>
+            </div>
+    </section>
+
+        <section class="contactMe" id = "contact">
             <div class="backpic">
                 <section class="about">
                     <h2 class="title">

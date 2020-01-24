@@ -29,6 +29,7 @@ html,body
   margin-top: 0;
   text-align: center;
   color:aliceblue;
+  margin-bottom: 43px;
 }
 
 
@@ -112,7 +113,8 @@ nav {
 }
 
 .allMainContents {
-  clear:both
+  clear:both;
+
 }
 * {box-sizing:border-box}
 
@@ -122,13 +124,14 @@ nav {
   max-width: 100%;
   position: relative;
   margin: auto;
+  margin-top:99px;
+
   
   
 }
 
-.slideRes {
 
-  top: 0;
+.slideRes {top: 0;
   width: 40%;
   height: 40%;
   max-height: 100px;
@@ -138,11 +141,8 @@ nav {
   margin-top: 10%;
   border: 2px groove grey;
   position: absolute;
-  background-color:#7aadda69 ;
-  box-shadow: 20px 20px 20px 20px #b2cce221;
-
-
-}
+  background-color:#7aadda69;
+  box-shadow: 20px 20px 20px 20px #b2cce221;}
 
 .slideHead1 {
     margin-top: -11px;
@@ -217,18 +217,17 @@ nav {
 
 
 .aboutMeContents {
-  display: flex;
-  background: url("../images/4.jpg") no-repeat center center fixed;
-  width: auto;
-  
-    min-height: 280px;
-    max-height: 720px;
 
-    flex: 0 1 auto;
+  background: url("../images/6.jpg") no-repeat center center fixed;
+  width: 100%;
+  
+
+
+ 
     background-size: cover ;
  
     margin: -9px auto;
-    height: 400px;
+    height: 720px;
     padding-top: 0px;
     background-color: black;
     z-index: 1;
@@ -240,17 +239,22 @@ nav {
 .aboutMeDiv {
     position:absolute;
     width:457px;
-
     height: 280px;
     left: 0;
     right: 0;
-    margin: 22px auto;
+    margin: 201.4px auto;
     border: 2px groove aliceblue;
     background-color: #251f2fd6;
     box-shadow: 39px 20px 66px 20px #8967b957;
     margin-bottom: 0px;
- 
 
+   
+}
+
+
+
+.hidden {
+  opacity: 0;
 }
 
 .aboutMeP {
@@ -262,11 +266,16 @@ nav {
 
 .port {
   position: relative;
+  background: url("../images/white.jpg") no-repeat center center scroll;
+  width: 100%;
+  
+  margin-top: -9px;
 
-  height: 447px;
+ 
+    background-size: cover ;
+  height: 720px;
   overflow-x: hidden;
   overflow-y: hidden;
-
 }
 
 
@@ -456,18 +465,26 @@ nav {
   z-index: 1;
 }
 
-body {
- 
 
-}
 
 .container {
-  margin: 56px auto;
+  margin: 200px auto;
   width: 250px;
   height: 200px;
   position: relative;
   perspective: 1200px;
+  transition: 1s ease-in-out;
 }
+
+figcaption {
+
+  visibility: hidden;
+  opacity: 0;
+  transition: 1s ease-in-out;
+}
+
+
+
 
 .carousel {
   height: 100%;
