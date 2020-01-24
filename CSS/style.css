@@ -508,6 +508,7 @@ figcaption {
   color: #FFF;
   opacity: 0.95;
   border-radius: 29px;
+  transition: 1s ease-in-out;
 }
 
 .a {

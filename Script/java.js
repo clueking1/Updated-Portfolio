@@ -28,7 +28,10 @@ const fig = document.querySelectorAll("figcaption");
 
 but.forEach((t) => {
   t.addEventListener('click', () => {
-      console.log(t)
+    for (i = 0; i < but.length; i++) {
+      but[i].style.opacity = "0";
+    }
+    t.style.opacity = "1";
     if(con.style.perspective === '1200px') {
       con.style.perspective = '800px'
       fig.forEach((t) => {
@@ -49,6 +52,10 @@ but.forEach((t) => {
       l.style.opacity= '1'
       l.style.visibility= 'visible'
   })
+
+  for (i = 0; i < but.length; i++) {
+    but[i].style.opacity = "1";
+  }
     }
   })
 })
