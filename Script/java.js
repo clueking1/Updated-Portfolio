@@ -29,7 +29,7 @@ const fig = document.querySelectorAll("figcaption");
 but.forEach((t) => {
   t.addEventListener('click', () => {
     for (i = 0; i < but.length; i++) {
-      but[i].style.opacity = "0";
+      but[i].style.opacity = ".3";
     }
     t.style.opacity = "1";
     if(con.style.perspective === '1200px') {
