@@ -113,7 +113,7 @@ $(window).scroll(function() {
     //marginLeft: '-163px',
 		//Blur suggestion from @janwagner: https://codepen.io/janwagner/ in comments
 		//"-webkit-filter": "blur(" + (scroll/200) + "px)",
-		//filter: "blur(" + (scroll/200) + "px)"
+		filter: "blur(" + (scroll/200) + "px)"
   });
 
 
@@ -121,12 +121,10 @@ $(window).scroll(function() {
   var yup = $('.nope').css('opacity')
 
   $(".port").css({
-    opacity: (1.6  + -yup)
-    
+    opacity: (1.8  + -yup),
+    //marginTop: (-10 - scroll),
 		//Blur suggestion from @janwagner: https://codepen.io/janwagner/ in comments
-		//"-webkit-filter": "blur(" + (scroll/200) + "px)",
-		//filter: "blur(" + (scroll/200) + "px)"
-  });
+		});
 });
 
 $(window).scroll(function(){

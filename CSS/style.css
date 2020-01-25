@@ -185,8 +185,7 @@ nav {
    min-height: 418.2px;
    max-height: 720px;
    z-index: 1;
-   flex: 0 1 auto;
-
+ 
   /* The above is shorthand for:
   flex-grow: 0,
   flex-shrink: 1,
@@ -195,7 +194,8 @@ nav {
 }
 
 .img1 {
-
+  height: 100%;
+  width: 100%;
 }
 
 /* Fading animation */
@@ -564,7 +564,7 @@ figcaption {
   width: 180px;
 }
 .next, .prev {
-  color: rgb(0, 0, 0); 
+  color: rgb(255, 255, 255); 
   margin: 19%; 
   display: inline-block; 
   text-decoration: none; 
@@ -606,4 +606,14 @@ figcaption {
   
 
 }
+
+.aboutMeContents {
+
+  background: url("../images/6_smaller.jpg") no-repeat center center fixed;
+  width: 100%;
+  
+
+
+ 
+    background-size: cover ;
 } 
