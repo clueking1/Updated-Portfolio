@@ -108,13 +108,25 @@ function rotate(e){
 
 $(window).scroll(function() {
   var scroll = $(window).scrollTop();
-	$(".img1").css({
-    transform: 'translate3d(0%, -'+(scroll/10)+'%, 0) scale('+(100 + scroll/5)/100+')',
+	$(".nope").css({
+    transform: 'translate3d(0%, '+(scroll/10)+'%, 0) scale('+(100 + scroll/5)/100+')',
     //marginLeft: '-163px',
 		//Blur suggestion from @janwagner: https://codepen.io/janwagner/ in comments
 		//"-webkit-filter": "blur(" + (scroll/200) + "px)",
 		//filter: "blur(" + (scroll/200) + "px)"
-	});
+  });
+
+
+  
+  var yup = $('.nope').css('opacity')
+
+  $(".port").css({
+    opacity: (1.6  + -yup)
+    
+		//Blur suggestion from @janwagner: https://codepen.io/janwagner/ in comments
+		//"-webkit-filter": "blur(" + (scroll/200) + "px)",
+		//filter: "blur(" + (scroll/200) + "px)"
+  });
 });
 
 $(window).scroll(function(){

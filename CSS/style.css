@@ -116,19 +116,17 @@ nav {
   clear:both;
   background: url("../images/heyeye.jpg") no-repeat center center fixed;
   background-size: cover;
+  overflow: hidden;
 }
 * {box-sizing:border-box}
 
 /* Slideshow container */
 .slideshow-container {
     display: flex;
-  max-width: 100%;
-  position: relative;
-  margin: auto;
-  margin-top:99px;
-
-  
-  
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+    margin-top: 49px;
 }
 
 
@@ -184,16 +182,20 @@ nav {
 
 .slideshow-container img {
    width: 100%;
-   min-height: 280px;
+   min-height: 418.2px;
    max-height: 720px;
    z-index: 1;
    flex: 0 1 auto;
-  
+
   /* The above is shorthand for:
   flex-grow: 0,
   flex-shrink: 1,
   flex-basis: auto
   */
+}
+
+.img1 {
+
 }
 
 /* Fading animation */
@@ -286,6 +288,7 @@ nav {
   height: 920px;
   overflow-x: hidden;
   overflow-y: hidden;
+  
 }
 
 
