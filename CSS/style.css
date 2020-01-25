@@ -183,19 +183,17 @@ nav {
 
 
 .slideshow-container img {
-   
-    width: 100%;
+   width: 100%;
+   min-height: 280px;
+   max-height: 720px;
+   z-index: 1;
+   flex: 0 1 auto;
   
-    min-height: 280px;
-    max-height: 720px;
-    z-index: 1;
-    flex: 0 1 auto;
   /* The above is shorthand for:
   flex-grow: 0,
   flex-shrink: 1,
   flex-basis: auto
   */
-
 }
 
 /* Fading animation */
@@ -248,9 +246,19 @@ nav {
     background-color: #251f2fd6;
     box-shadow: 39px 20px 66px 20px #8967b957;
     margin-bottom: 0px;
+    opacity: 0;
+
+    transform: translate(0, 50px); 
+    transition: 3s;
+}
+
 
    
-}
+
+.aboutMeDiv.visible { 
+  opacity: 1;
+  transform: translate(0, 0)
+  }
 
 
 
@@ -264,6 +272,7 @@ nav {
     text-align: center;
     font-size: .9em;
 }
+
 
 .port {
   position: relative;
