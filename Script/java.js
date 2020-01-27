@@ -77,6 +77,8 @@ window.onscroll = function(){
   }
   
 }
+
+
 var carousel = $(".carousel"),
     currdeg  = 0;
    
@@ -121,11 +123,6 @@ $(window).scroll(function() {
   var yup = $('.nope').css('opacity')
 
 
-  $(".port").css({
-    opacity: (1.8  + - yup),
-    marginTop: (0 - scroll),
-	
-    });
  
   
 });
@@ -172,6 +169,21 @@ $(document).on("scroll", function () {
   
     }
     })
+
+    $(window).on('scroll', function() { 
+      var scroll = $(window).scrollTop();
+      if ($(window).scrollTop() >= $( 
+        '.port').offset().top + $('.port'). 
+          outerHeight() - window.innerHeight) { 
+            $(".port").css({
+              transform: 'translate3d(0%, '+(scroll/100)+'%, 0) scale('+(100 + scroll/50)/199+')',
+              //marginLeft: '-163px',
+              //Blur suggestion from @janwagner: https://codepen.io/janwagner/ in comments
+              //"-webkit-filter": "blur(" + (scroll/200) + "px)",
+          
+            });
+          
+      } })
 
 
  
