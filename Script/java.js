@@ -174,7 +174,7 @@ $(document).on("scroll", function () {
       var scroll = $(window).scrollTop();
       if ($(window).scrollTop() >= $( 
         '.port').offset().top + $('.port'). 
-          outerHeight() - window.innerHeight + -200) { 
+          outerHeight() - window.innerHeight + -350) { 
             $(".port").css({
               transform: 'translate3d(0%, '+(1)+'%, 0) scale('+(1)+')',
               //marginLeft: '-163px',
@@ -185,7 +185,7 @@ $(document).on("scroll", function () {
           
       }else if  ($(window).scrollTop() <= $( 
         '.port').offset().top + $('.port'). 
-          outerHeight() - window.innerHeight + -200) {
+          outerHeight() - window.innerHeight + -350) {
         $(".port").css({
           transform: 'translate3d(0%, '+(.927)+'%, 0) scale('+(.918)+')',
           //marginLeft: '-163px',
@@ -199,7 +199,7 @@ $(document).on("scroll", function () {
         var scroll = $(window).scrollTop();
         if ($(window).scrollTop() >= $( 
           '.aboutMeContents').offset().top + $('.aboutMeContents'). 
-            outerHeight() - window.innerHeight + -200) { 
+            outerHeight() - window.innerHeight + -350) { 
               $(".aboutMeContents").css({
                 transform: 'translate3d(0%, '+(1)+'%, 0) scale('+(1)+')',
                 //marginLeft: '-163px',
@@ -210,7 +210,7 @@ $(document).on("scroll", function () {
             
         }else if  ($(window).scrollTop() <= $( 
           '.aboutMeContents').offset().top + $('.aboutMeContents'). 
-            outerHeight() - window.innerHeight + -200) {
+            outerHeight() - window.innerHeight + -350) {
           $(".aboutMeContents").css({
             transform: 'translate3d(0%, '+(.927)+'%, 0) scale('+(.918)+')',
             //marginLeft: '-163px',
@@ -224,7 +224,7 @@ $(document).on("scroll", function () {
           var scroll = $(window).scrollTop();
           if ($(window).scrollTop() >= $( 
             '.contactMe').offset().top + $('.contactMe'). 
-              outerHeight() - window.innerHeight + -200) { 
+              outerHeight() - window.innerHeight + -350) { 
                 $(".contactMe").css({
                   transform: 'translate3d(0%, '+(1)+'%, 0) scale('+(1)+')',
                   //marginLeft: '-163px',
@@ -235,7 +235,7 @@ $(document).on("scroll", function () {
               
           }else if  ($(window).scrollTop() <= $( 
             '.contactMe').offset().top + $('.contactMe'). 
-              outerHeight() - window.innerHeight + -200) {
+              outerHeight() - window.innerHeight + -350) {
             $(".contactMe").css({
               transform: 'translate3d(0%, '+(.927)+'%, 0) scale('+(.918)+')',
               //marginLeft: '-163px',
