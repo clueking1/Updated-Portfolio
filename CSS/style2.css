@@ -48,6 +48,8 @@ html,body
     
     'img1 img1 img1 img1 img1 img1'
     'img1 img1 img1 img1 img1 img1';
+    overflow-x: hidden;
+    overflow-y: hidden;
 
    
 }
