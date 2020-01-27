@@ -1,21 +1,5 @@
 
 
-
-var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";
-  
-}
-
 const someElement = document.querySelector(".nav");
 const someElement2 = document.querySelectorAll(".yes");
 const but = document.querySelectorAll(".item");
@@ -60,23 +44,7 @@ but.forEach((t) => {
   })
 })
 
-window.onscroll = function(){
 
-  if(someElement.getBoundingClientRect().top <= 0){
-
-    someElement2.forEach(t => t.style.backgroundColor = "none")
-    someElement.style.border = "2px groove  #a2a3a5"
-    someElement.style.backgroundColor = "#251f2fd6"
-  
-  } 
-  if (someElement.getBoundingClientRect().top > 0) {
-
-    someElement.style.border = ""
-    someElement.style.backgroundColor = ""
-    someElement2.forEach(t => t.style.backgroundColor = "black")
-  }
-  
-}
 
 
 var carousel = $(".carousel"),
@@ -109,144 +77,107 @@ function rotate(e){
 }
 
 $(window).scroll(function() {
-  var scroll = $(window).scrollTop();
-	$(".nope").css({
-    transform: 'translate3d(0%, '+(scroll/10)+'%, 0) scale('+(100 + scroll/5)/100+')',
-    //marginLeft: '-163px',
-		//Blur suggestion from @janwagner: https://codepen.io/janwagner/ in comments
-		//"-webkit-filter": "blur(" + (scroll/200) + "px)",
-		filter: "blur(" + (scroll/200) + "px)"
-  });
+    var scroll = $(window).scrollTop();
+      $(".nope").css({
+      transform: 'translate3d(0%, '+(scroll/10)+'%, 0) scale('+(100 + scroll/5)/100+')',
 
-  console.log($('.port').scrollTop())
-  
-  var yup = $('.nope').css('opacity')
-
-
- 
-  
+          "-webkit-filter": "blur(" + (scroll/200) + "px)",
+          filter: "blur(" + (scroll/200) + "px)"
+    });
 });
 
+$(window).on('scroll', function() { 
+    var scroll = $(window).scrollTop();
+    if ($(window).scrollTop() >= $( 
+      '.port').offset().top + $('.port'). 
+        outerHeight() - window.innerHeight + -350) { 
+          $(".port").css({
+            transform: 'translate3d(0%, '+(1)+'%, 0) scale('+(1)+')',
 
+        
+          })
+          $(".nav a").css({
+            padding: '10px',
+            backgroundColor: '#23242748',
+        });
+        $(".container").css({
+            opacity: 1
+        }) ;
+        
+    } else if  ($(window).scrollTop() <= $( 
+      '.port').offset().top + $('.port'). 
+        outerHeight() - window.innerHeight + -350) {
+      $(".port").css({
+        transform: 'translate3d(0%, '+(.927)+'%, 0) scale('+(.918)+')',
 
-$(window).scroll(function(){
-  $(".nope").css("opacity", 1 - $(window).scrollTop() / 1790);
-});
-
-
-$(document).on("scroll", function () {
-  var pageTop = $(document).scrollTop()
-  var pageBottom = pageTop + $(window).height()
-  var tag = $(".img1")
-  
-
-  
-  if ($(tag).position().top < pageBottom) {
-  $(tag).addClass("visible")
-  } else {
-    $(tag).removeClass("visible")
-  }
-  })
-
-  
-
-
-
-  $(function(){  // $(document).ready shorthand
-    $('.aboutMeDiv').fadeIn('slow');
-  });
-  
-  $(document).on("scroll", function () {
-    var pageTop = $(document).scrollTop()
-    var pageBottom = pageTop + $(window).height()
-    var tags = $(".aboutMeDiv")
- 
     
-    if ($(".aboutMeDiv").position().top < pageBottom) {
-    $(".aboutMeDiv").addClass("visible")
-    } else {
-      $(".aboutMeDiv").removeClass("visible")
-  
-    }
-    })
+      })
+      $(".container").css({
+          opacity: 0
+      }) ;
+      $(".nav a").css({
+        padding: '45px',
+        backgroundColor: '#232427'
+    });
+    } })
 
     $(window).on('scroll', function() { 
-      var scroll = $(window).scrollTop();
-      if ($(window).scrollTop() >= $( 
-        '.port').offset().top + $('.port'). 
-          outerHeight() - window.innerHeight + -350) { 
-            $(".port").css({
-              transform: 'translate3d(0%, '+(1)+'%, 0) scale('+(1)+')',
-              //marginLeft: '-163px',
-              //Blur suggestion from @janwagner: https://codepen.io/janwagner/ in comments
-              //"-webkit-filter": "blur(" + (scroll/200) + "px)",
-          
-            });
-          
-      }else if  ($(window).scrollTop() <= $( 
-        '.port').offset().top + $('.port'). 
-          outerHeight() - window.innerHeight + -350) {
-        $(".port").css({
-          transform: 'translate3d(0%, '+(.927)+'%, 0) scale('+(.918)+')',
-          //marginLeft: '-163px',
-          //Blur suggestion from @janwagner: https://codepen.io/janwagner/ in comments
-          //"-webkit-filter": "blur(" + (scroll/200) + "px)",
-      
-        }) ;
-      } })
-
-      $(window).on('scroll', function() { 
         var scroll = $(window).scrollTop();
         if ($(window).scrollTop() >= $( 
           '.aboutMeContents').offset().top + $('.aboutMeContents'). 
             outerHeight() - window.innerHeight + -350) { 
               $(".aboutMeContents").css({
                 transform: 'translate3d(0%, '+(1)+'%, 0) scale('+(1)+')',
-                //marginLeft: '-163px',
-                //Blur suggestion from @janwagner: https://codepen.io/janwagner/ in comments
-                //"-webkit-filter": "blur(" + (scroll/200) + "px)",
-            
+      
+                
               });
+              $(".aboutMeDiv").css({
+                  opacity: 1
+              })
+              $(".slideRes").css({
+                opacity: 1
+              })
             
         }else if  ($(window).scrollTop() <= $( 
           '.aboutMeContents').offset().top + $('.aboutMeContents'). 
             outerHeight() - window.innerHeight + -350) {
           $(".aboutMeContents").css({
             transform: 'translate3d(0%, '+(.927)+'%, 0) scale('+(.918)+')',
-            //marginLeft: '-163px',
-            //Blur suggestion from @janwagner: https://codepen.io/janwagner/ in comments
-            //"-webkit-filter": "blur(" + (scroll/200) + "px)",
+      
         
           }) ;
+          $(".aboutMeDiv").css({
+            opacity: 0
+        })
+      
+        $(".slideRes").css({
+          opacity: 0
+        })
         } })
 
         $(window).on('scroll', function() { 
-          var scroll = $(window).scrollTop();
-          if ($(window).scrollTop() >= $( 
-            '.contactMe').offset().top + $('.contactMe'). 
-              outerHeight() - window.innerHeight + -350) { 
-                $(".contactMe").css({
-                  transform: 'translate3d(0%, '+(1)+'%, 0) scale('+(1)+')',
-                  //marginLeft: '-163px',
-                  //Blur suggestion from @janwagner: https://codepen.io/janwagner/ in comments
-                  //"-webkit-filter": "blur(" + (scroll/200) + "px)",
-              
-                });
-              
-          }else if  ($(window).scrollTop() <= $( 
-            '.contactMe').offset().top + $('.contactMe'). 
-              outerHeight() - window.innerHeight + -350) {
-            $(".contactMe").css({
-              transform: 'translate3d(0%, '+(.927)+'%, 0) scale('+(.918)+')',
-              //marginLeft: '-163px',
-              //Blur suggestion from @janwagner: https://codepen.io/janwagner/ in comments
-              //"-webkit-filter": "blur(" + (scroll/200) + "px)",
-          
+            var scroll = $(window).scrollTop();
+            if ($(window).scrollTop() >= $( 
+              '.contactMe').offset().top + $('.contactMe'). 
+                outerHeight() - window.innerHeight + -350) { 
+                  $(".contactMe").css({
+                    transform: 'translate3d(0%, '+(1)+'%, 0) scale('+(1)+')',
+      
+                
+                  });
+                  $(".about").css({
+                    opacity: 1
+                }) ;
+            
+                
+            }else if  ($(window).scrollTop() <= $( 
+              '.contactMe').offset().top + $('.contactMe'). 
+                outerHeight() - window.innerHeight + -350) {
+              $(".contactMe").css({
+                transform: 'translate3d(0%, '+(.927)+'%, 0) scale('+(.918)+')',
             }) ;
-          } })
-
-
- 
-
-
-  
+              $(".about").css({
+                opacity: 0
+            }) ;
+          
+            } })
