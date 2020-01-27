@@ -218,23 +218,15 @@ nav {
 }
 
 
-.aboutMeContents {
-
-  background: url("../images/6.jpg") no-repeat center center fixed;
+.aboutMeContents {background: url("../images/6.jpg") no-repeat center center fixed;
   width: 100%;
-  
-
-
- 
-    background-size: cover ;
- 
-    margin: -9px auto;
-    height: 920px;
-    padding-top: 0px;
-    background-color: black;
-    z-index: 1;
-
-}
+  background-size: cover;
+  margin: -9px auto;
+  height: 920px;padding-top: 0px; 
+  transition: .8s 
+  ease-in-out;
+  transform: translate3d(0%, .972%, 0px) scale(.918);
+  z-index: 1;}
 
 
 
@@ -289,7 +281,8 @@ nav {
   height: 920px;
   overflow-x: hidden;
   overflow-y: hidden;
-  
+  transition: .8s ease-in-out;
+  transform: translate3d(0%, .972%, 0px) scale(.918)
 }
 
 
@@ -396,7 +389,10 @@ nav {
   height: 920px;
   background: url("../images/3.jpg") no-repeat center center fixed;
   background-size: cover;
-  margin-top: -42px;
+  margin-top: 10px;
+  transition: .8s 
+  ease-in-out;
+  transform: translate3d(0%, .972%, 0px) scale(.918);
 }
 
 .about {
@@ -630,7 +626,7 @@ figcaption {
   height: 920px;
   overflow-x: hidden;
   overflow-y: hidden;
-  
+  transition: .8s ease-in-out;
 }
 
 .contactMe {

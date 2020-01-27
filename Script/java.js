@@ -174,16 +174,76 @@ $(document).on("scroll", function () {
       var scroll = $(window).scrollTop();
       if ($(window).scrollTop() >= $( 
         '.port').offset().top + $('.port'). 
-          outerHeight() - window.innerHeight) { 
+          outerHeight() - window.innerHeight + -200) { 
             $(".port").css({
-              transform: 'translate3d(0%, '+(scroll/100)+'%, 0) scale('+(100 + scroll/50)/199+')',
+              transform: 'translate3d(0%, '+(1)+'%, 0) scale('+(1)+')',
               //marginLeft: '-163px',
               //Blur suggestion from @janwagner: https://codepen.io/janwagner/ in comments
               //"-webkit-filter": "blur(" + (scroll/200) + "px)",
           
             });
           
+      }else if  ($(window).scrollTop() <= $( 
+        '.port').offset().top + $('.port'). 
+          outerHeight() - window.innerHeight + -200) {
+        $(".port").css({
+          transform: 'translate3d(0%, '+(.927)+'%, 0) scale('+(.918)+')',
+          //marginLeft: '-163px',
+          //Blur suggestion from @janwagner: https://codepen.io/janwagner/ in comments
+          //"-webkit-filter": "blur(" + (scroll/200) + "px)",
+      
+        }) ;
       } })
+
+      $(window).on('scroll', function() { 
+        var scroll = $(window).scrollTop();
+        if ($(window).scrollTop() >= $( 
+          '.aboutMeContents').offset().top + $('.aboutMeContents'). 
+            outerHeight() - window.innerHeight + -200) { 
+              $(".aboutMeContents").css({
+                transform: 'translate3d(0%, '+(1)+'%, 0) scale('+(1)+')',
+                //marginLeft: '-163px',
+                //Blur suggestion from @janwagner: https://codepen.io/janwagner/ in comments
+                //"-webkit-filter": "blur(" + (scroll/200) + "px)",
+            
+              });
+            
+        }else if  ($(window).scrollTop() <= $( 
+          '.aboutMeContents').offset().top + $('.aboutMeContents'). 
+            outerHeight() - window.innerHeight + -200) {
+          $(".aboutMeContents").css({
+            transform: 'translate3d(0%, '+(.927)+'%, 0) scale('+(.918)+')',
+            //marginLeft: '-163px',
+            //Blur suggestion from @janwagner: https://codepen.io/janwagner/ in comments
+            //"-webkit-filter": "blur(" + (scroll/200) + "px)",
+        
+          }) ;
+        } })
+
+        $(window).on('scroll', function() { 
+          var scroll = $(window).scrollTop();
+          if ($(window).scrollTop() >= $( 
+            '.contactMe').offset().top + $('.contactMe'). 
+              outerHeight() - window.innerHeight + -200) { 
+                $(".contactMe").css({
+                  transform: 'translate3d(0%, '+(1)+'%, 0) scale('+(1)+')',
+                  //marginLeft: '-163px',
+                  //Blur suggestion from @janwagner: https://codepen.io/janwagner/ in comments
+                  //"-webkit-filter": "blur(" + (scroll/200) + "px)",
+              
+                });
+              
+          }else if  ($(window).scrollTop() <= $( 
+            '.contactMe').offset().top + $('.contactMe'). 
+              outerHeight() - window.innerHeight + -200) {
+            $(".contactMe").css({
+              transform: 'translate3d(0%, '+(.927)+'%, 0) scale('+(.918)+')',
+              //marginLeft: '-163px',
+              //Blur suggestion from @janwagner: https://codepen.io/janwagner/ in comments
+              //"-webkit-filter": "blur(" + (scroll/200) + "px)",
+          
+            }) ;
+          } })
 
 
  
