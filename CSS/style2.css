@@ -66,9 +66,9 @@ html,body
     text-align: center;
     padding: 45px 0px;
     text-decoration: none;
-    color:#0a86f7;
+    color:#f2f0f5d6;
     border: 2px;
-    background-color: #232427;
+    background-color:  #000000b0;
 
     box-shadow: 20px 20px 20px 20px #91b0cc1c;
     transition: .3s ease-in-out;
@@ -76,8 +76,8 @@ html,body
 }
 
 a:hover {
-  background-color: #5595ccb7;
-  color: black
+    background-color: #454748b7;
+    color: #c4c577
 }
 
 .port {
@@ -110,6 +110,7 @@ a:hover {
     perspective: 1200px;
     -webkit-transition: 1s ease-in-out;
     transition: 1s ease-in-out;
+    margin-bottom:0px
   }
   
   figcaption {
@@ -174,13 +175,13 @@ a:hover {
    .prev {
      grid-area: but1;
     color: rgb(255, 255, 255); 
- 
+  margin-top: -59px;
     text-align:center;
     text-decoration: none; 
     font-size: 2rem; 
     transition: 0.6s color; 
     position: relative; 
-
+   
     border-bottom: none; 
     line-height: 0;
     margin-bottom: 30px;
@@ -190,7 +191,7 @@ a:hover {
      grid-area: but2;
     color: rgb(255, 255, 255); 
     text-align:center;
-
+    margin-top: -59px;
     text-decoration: none; 
     font-size: 2rem; 
     transition: 0.6s color; 
@@ -358,6 +359,7 @@ a:hover {
     color: #ffffffd6;
     background-color: #251f2fd6;
     transition: .3s ease-in-out;
+    text-align: center;
   }
   
   .resBut:hover {
@@ -477,3 +479,18 @@ a:hover {
     right: 0;
     margin: 42px auto;
   }
+
+  @media only screen and (max-width: 500px) {
+    .aboutMeDiv {
+       position:absolute;
+       width:344px;
+   
+       height: 363px;
+    }
+    
+    .slideRes {
+        margin-top: 700px;
+    }
+   
+   
+   }

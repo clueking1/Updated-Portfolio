@@ -90,7 +90,7 @@ $(window).on('scroll', function() {
     var scroll = $(window).scrollTop();
     if ($(window).scrollTop() >= $( 
       '.port').offset().top + $('.port'). 
-        outerHeight() - window.innerHeight + -350) { 
+        outerHeight() - window.innerHeight + -400) { 
           $(".port").css({
             transform: 'translate3d(0%, '+(1)+'%, 0) scale('+(1)+')',
 
@@ -98,7 +98,7 @@ $(window).on('scroll', function() {
           })
           $(".nav a").css({
             padding: '10px',
-            backgroundColor: '#23242748',
+            //backgroundColor: '#342b4491',
         });
         $(".container").css({
             opacity: 1
@@ -106,7 +106,7 @@ $(window).on('scroll', function() {
         
     } else if  ($(window).scrollTop() <= $( 
       '.port').offset().top + $('.port'). 
-        outerHeight() - window.innerHeight + -350) {
+        outerHeight() - window.innerHeight + -400) {
       $(".port").css({
         transform: 'translate3d(0%, '+(.927)+'%, 0) scale('+(.918)+')',
 
@@ -117,7 +117,7 @@ $(window).on('scroll', function() {
       }) ;
       $(".nav a").css({
         padding: '45px',
-        backgroundColor: '#232427'
+        //backgroundColor: '##342b4491'
     });
     } })
 
@@ -125,7 +125,7 @@ $(window).on('scroll', function() {
         var scroll = $(window).scrollTop();
         if ($(window).scrollTop() >= $( 
           '.aboutMeContents').offset().top + $('.aboutMeContents'). 
-            outerHeight() - window.innerHeight + -350) { 
+            outerHeight() - window.innerHeight + -400) { 
               $(".aboutMeContents").css({
                 transform: 'translate3d(0%, '+(1)+'%, 0) scale('+(1)+')',
       
@@ -140,7 +140,7 @@ $(window).on('scroll', function() {
             
         }else if  ($(window).scrollTop() <= $( 
           '.aboutMeContents').offset().top + $('.aboutMeContents'). 
-            outerHeight() - window.innerHeight + -350) {
+            outerHeight() - window.innerHeight + -400) {
           $(".aboutMeContents").css({
             transform: 'translate3d(0%, '+(.927)+'%, 0) scale('+(.918)+')',
       
@@ -159,7 +159,7 @@ $(window).on('scroll', function() {
             var scroll = $(window).scrollTop();
             if ($(window).scrollTop() >= $( 
               '.contactMe').offset().top + $('.contactMe'). 
-                outerHeight() - window.innerHeight + -350) { 
+                outerHeight() - window.innerHeight + -400) { 
                   $(".contactMe").css({
                     transform: 'translate3d(0%, '+(1)+'%, 0) scale('+(1)+')',
       
@@ -172,7 +172,7 @@ $(window).on('scroll', function() {
                 
             }else if  ($(window).scrollTop() <= $( 
               '.contactMe').offset().top + $('.contactMe'). 
-                outerHeight() - window.innerHeight + -350) {
+                outerHeight() - window.innerHeight + -400) {
               $(".contactMe").css({
                 transform: 'translate3d(0%, '+(.927)+'%, 0) scale('+(.918)+')',
             }) ;
