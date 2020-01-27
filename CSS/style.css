@@ -130,14 +130,15 @@ nav {
 }
 
 
-.slideRes {top: 0;
-  width: 40%;
+.slideRes {
   height: 40%;
   max-height: 100px;
   min-height: 100px;
   max-width: 200px;
-  margin-left: 55%;
-  margin-top: 10%;
+  left: 0;
+  right: 0;
+  margin: 593px auto;
+
   border: 2px groove grey;
   position: absolute;
   background-color:#7aadda69;
@@ -183,7 +184,7 @@ nav {
 .slideshow-container img {
    width: 100%;
    min-height: 418.2px;
-   max-height: 720px;
+   max-height: 747px;
    z-index: 1;
  
   /* The above is shorthand for:
@@ -281,7 +282,7 @@ nav {
   background: url("../images/5.jpg") no-repeat center center fixed;
   width: 100%;
   
-  margin-top: -9px;
+  margin-top: -12px;
 
  
     background-size: cover ;
@@ -609,7 +610,7 @@ figcaption {
 
 .aboutMeContents {
 
-  background: url("../images/6_smaller.jpg") no-repeat center center fixed;
+  background: url("../images/6_smaller.jpg") no-repeat center center scroll;
   width: 100%;
   
 
@@ -617,5 +618,27 @@ figcaption {
  
     background-size: cover ;
 } 
+.port {
+  position: relative;
+  background: url("../images/5.jpg") no-repeat center center scroll;
+  width: 100%;
+  z-index: 0;
+  margin-top: -9px;
+
+ 
+    background-size: cover ;
+  height: 920px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  
+}
+
+.contactMe {
+  height: 920px;
+  background: url("../images/3.jpg") no-repeat center center scroll;
+  background-size: cover;
+  margin-top: -42px;
+}
+
 
 }

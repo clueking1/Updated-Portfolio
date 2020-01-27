@@ -63,14 +63,14 @@ but.forEach((t) => {
 window.onscroll = function(){
 
   if(someElement.getBoundingClientRect().top <= 0){
-   console.log("hi")
+
     someElement2.forEach(t => t.style.backgroundColor = "none")
     someElement.style.border = "2px groove  #a2a3a5"
     someElement.style.backgroundColor = "#251f2fd6"
   
   } 
   if (someElement.getBoundingClientRect().top > 0) {
-    console.log("hi")
+
     someElement.style.border = ""
     someElement.style.backgroundColor = ""
     someElement2.forEach(t => t.style.backgroundColor = "black")
@@ -116,16 +116,21 @@ $(window).scroll(function() {
 		filter: "blur(" + (scroll/200) + "px)"
   });
 
-
+  console.log($('.port').scrollTop())
   
   var yup = $('.nope').css('opacity')
 
+
   $(".port").css({
-    opacity: (1.8  + -yup),
-    //marginTop: (-10 - scroll),
-		//Blur suggestion from @janwagner: https://codepen.io/janwagner/ in comments
-		});
+    opacity: (1.8  + - yup),
+    marginTop: (0 - scroll),
+	
+    });
+ 
+  
 });
+
+
 
 $(window).scroll(function(){
   $(".nope").css("opacity", 1 - $(window).scrollTop() / 1790);
