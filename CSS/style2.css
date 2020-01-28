@@ -5,10 +5,11 @@ html,body
     height: 100%;
     margin: 0px;
     padding: 0px;
-    
+  
     font-family: 'Cairo', sans-serif;
 
 }
+
 
 
 .hi {
@@ -40,6 +41,7 @@ html,body
     display: grid;
     grid-template-areas: 'link1 link1 link2 link2 link3 link3'
     'link1 link1 link2 link2 link3 link3';
+    width: 100%;
 }
 
 .allMainContents {
@@ -48,9 +50,7 @@ html,body
     
     'img1 img1 img1 img1 img1 img1'
     'img1 img1 img1 img1 img1 img1';
-    overflow-x: hidden;
-    overflow-y: hidden;
-
+ 
    
 }
 

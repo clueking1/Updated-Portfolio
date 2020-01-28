@@ -77,12 +77,13 @@ function rotate(e){
 }
 
 $(window).scroll(function() {
-    var scroll = $(window).scrollTop();
+    const scroll = $(window).scrollTop();
       $(".nope").css({
       transform: 'translate3d(0%, '+(scroll/10)+'%, 0) scale('+(100 + scroll/5)/100+')',
+      "-moz-transform": 'translate3d(0%, '+(scroll/10)+'%, 0) scale('+(100 + scroll/5)/100+')',
 
-          "-webkit-filter": "blur(" + (scroll/200) + "px)",
-          filter: "blur(" + (scroll/200) + "px)"
+          //"-webkit-filter": "blur(" + (scroll/200) + "px)",
+          //filter: "blur(" + (scroll/200) + "px)"
     });
 });
 
@@ -97,7 +98,7 @@ $(window).on('scroll', function() {
         
           })
           $(".nav a").css({
-            padding: '10px',
+            padding: '10px 0px',
             //backgroundColor: '#342b4491',
         });
         $(".container").css({
@@ -116,7 +117,7 @@ $(window).on('scroll', function() {
           opacity: 0
       }) ;
       $(".nav a").css({
-        padding: '45px',
+        padding: '45px 0px',
         //backgroundColor: '##342b4491'
     });
     } })
