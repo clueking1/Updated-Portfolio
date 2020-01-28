@@ -79,7 +79,7 @@ html,body
 
 a:hover {
     background-color: #454748b7;
-    color: #c4c577
+    color: #91b0cc
 }
 
 .port {
@@ -225,12 +225,12 @@ a:hover {
     margin-left: -6px;
     padding: 2px;
     position: absolute;
-    border: 6px groove #565656;
+    /* border: 6px groove #565656; */
     background-color: #000000d9;
     text-align: center;
-    width: 256px;
+    width: 252px;
     color:#91b0cc;
-    height: 48px;
+    /* height: 48px; */
   }
   
   
@@ -251,16 +251,16 @@ a:hover {
 
   .portA3 {
     position:absolute;
-    width: 250px;
+    width: 242px;
     margin-left: 0px;
     margin-top: -47px;
     text-align: center;
-    height: 39px;
+    /* height: 39px; */
     text-decoration: none;
     color:#91b0cc;
-    padding: 2px;
+    padding: 4px;
     font-size: 1em;
-    border: 2px groove;
+    /* border: 2px groove; */
     box-shadow: 20px 20px 20px 20px #91b0cc1c;
     transition: .3s ease-in-out;
     background-color: #000000d9;
@@ -268,24 +268,22 @@ a:hover {
   
   .portA {
     position:absolute;
-    width: 125px;
+    width: 119px;
     margin-left: 0px;
     margin-top: -47px;
     text-align: center;
-    height: 39px;
+    /* height: 39px; */
   }
   
   .portA2 {
     position:absolute;
-    width: 125px;
+    width: 118px;
     left: 0;
     right: 0;
     margin: -47px auto;
-   
     margin-left: 125px;
     text-align: center;
-    height: 39px;
-  
+    /* height: 39px; */
   }
 
   .aboutMeContents {background: url("../images/6.jpg") no-repeat center center fixed;
