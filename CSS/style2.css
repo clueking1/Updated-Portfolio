@@ -25,6 +25,9 @@ html,body
  }
 .link3 { grid-area: link3; 
     transition: .3s ease-in-out;}
+
+
+
 .img1 { grid-area: img1; 
     background: url(../images/1.jpg) no-repeat center center scroll;
     background-size: cover;
